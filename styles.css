@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
 :root {
@@ -78,7 +77,7 @@ body {
   position: relative;
   background: linear-gradient(140deg, var(--primary-dark) 0%, var(--background) 70%);
   text-align: center;
-  padding: 4rem 1rem 6rem 1rem;
+  padding: 4rem 1rem 8rem 1rem; /* Increased bottom padding for better spacing */
   overflow: hidden;
 }
 
@@ -216,6 +215,9 @@ footer {
   .navbar { flex-direction: column; gap: 0.5em; }
   .nav-links { gap: 1rem; }
   .hero h1 { font-size: 2rem; }
+  .hero {
+    padding: 2.5rem 0.5rem 7rem 0.5rem; /* Maintain extra bottom padding on mobile */
+  }
   .info-section, .cta-section { padding: 1.2rem 0.5rem; }
 }
 
