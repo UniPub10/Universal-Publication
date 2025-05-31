@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --primary: #7c3aed;      /* cosmic purple */
+  --primary-light: #a78bfa;
+  --primary-dark: #4c1d95;
+  --background: #1a1625;
+  --accent: #f5f3ff;
+  --white: #fff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--accent);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(26,22,37,0.92);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 0.3em 0.6em;
+  border-radius: 0.3em;
+}
+
+.nav-links li a:hover,
+.nav-links li .cta {
+  color: var(--white);
+  background: var(--primary);
+}
+
+.nav-links li .cta {
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--background) 70%);
+  text-align: center;
+  padding: 4rem 1rem 6rem 1rem;
+  overflow: hidden;
+}
+
+.stars-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100%;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 32px #0008;
+}
+
+.hero .highlight {
+  color: var(--primary-light);
+  display: block;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.9em 2em;
+  border: none;
+  border-radius: 1.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 20px var(--primary-dark);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 6px 30px var(--primary);
+}
+
+/* Info/Mission Sections */
+.info-section {
+  max-width: 680px;
+  margin: 3rem auto;
+  background: rgba(124,58,237,0.04);
+  border-radius: 1.5em;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  box-shadow: 0 2px 18px rgba(124,58,237,0.04);
+  text-align: left;
+}
+
+.info-section h2 {
+  color: var(--primary);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.info-section p, .info-section ul {
+  font-size: 1.13rem;
+  color: var(--accent);
+}
+
+.info-section ul {
+  margin-top: 1.1rem;
+  padding-left: 1.6rem;
+}
+
+.info-section li {
+  margin-bottom: 0.7rem;
+}
+
+/* Call To Action Section */
+.cta-section {
+  background: linear-gradient(120deg, var(--primary) 20%, var(--primary-dark) 90%);
+  color: var(--white);
+  border-radius: 1.8em;
+  box-shadow: 0 4px 38px var(--primary-dark);
+  padding: 3.2rem 1.5rem 2.5rem 1.5rem;
+  max-width: 700px;
+  margin: 4rem auto 0 auto;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.cta-section p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.cta-section .btn-primary {
+  font-size: 1.18rem;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  letter-spacing: 0.03em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #b2a3e6;
+  margin-top: 3.5rem;
+  padding: 2.5rem 0 1.5rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .logo { font-size: 1.2rem; }
+  .navbar { flex-direction: column; gap: 0.5em; }
+  .nav-links { gap: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .info-section, .cta-section { padding: 1.2rem 0.5rem; }
+}
+
+@media (max-width: 450px) {
+  .hero h1 { font-size: 1.3rem; }
+  .cta-section h2 { font-size: 1.5rem; }
+  .info-section h2 { font-size: 1.2rem; }
+}
